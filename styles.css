@@ -1,7 +1,70 @@
-/*  your css code here. If applica*/
-#outer,#inner,#middle{
-	border-radius:50%;
+/* Reset margins and paddings */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Optional: to provide a contrasting background */
 }
-#outer{
-	
+
+#outer, #middle, #inner {
+    position: absolute;
+    border-radius: 50%;
+}
+
+#outer {
+    width: 300px;
+    height: 300px;
+    background-color: #ff0000;
+}
+
+#middle {
+    width: 250px;
+    height: 250px;
+    background-color: #ffa500;
+    top: 25px; /* Center within the parent */
+    left: 25px; /* Center within the parent */
+}
+
+#inner {
+    width: 200px;
+    height: 200px;
+    background-color: #ffff00;
+    top: 25px; /* Center within the parent */
+    left: 25px; /* Center within the parent */
+}
+
+/* Add additional nested divs for smaller circles */
+#inner::before {
+    content: '';
+    position: absolute;
+    top: 25px; /* Center within the parent */
+    left: 25px; /* Center within the parent */
+    width: 150px;
+    height: 150px;
+    background-color: #008000;
+    border-radius: 50%;
+}
+
+#inner::after {
+    content: '';
+    position: absolute;
+    top: 50px; /* Center within the parent */
+    left: 50px; /* Center within the parent */
+    width: 100px;
+    height: 100px;
+    background-color: #0000ff;
+    border-radius: 50%;
+}
+
+#inner #smallest {
+    width: 50px;
+    height: 50px;
+    background-color: #800080;
+    border-radius: 50%;
+    position: absolute;
+    top: 75px; /* Center within the parent */
+    left: 75px; /* Center within the parent */
 }
